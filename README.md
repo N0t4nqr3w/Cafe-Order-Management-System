@@ -3,10 +3,10 @@ By: Elijah Parkos, Carson Logelin, Benjamin Li, Andrew Yang
 
 ## Description
 This API is designed for a cafe order management system that handles customer interactions, menu management, and order processing. It allows users:
-- Register and manage customers.
-- View and manage menu items.
-- Create and track orders.
-- 
+1. Register and manage customers.
+2. View and manage menu items.
+3. Create and track orders.
+4. 
 
 ## List of Collections/Models
 ### Menu Items
