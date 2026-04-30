@@ -1,0 +1,1586 @@
+{
+  "info": {
+    "_postman_id": "79c93386-50f8-4ab3-86ed-76e500083c28",
+    "name": "Assignment4",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54017131"
+  },
+  "item": [
+    {
+      "name": "baristas",
+      "item": [
+        {
+          "name": "Get all baristas",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sort baristas by name (alphabetical)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas?sort=name",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "name"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sort baristas by hire date (least to most recent)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas?sort=date",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "date"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get inactive baristas",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas?active=false",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ],
+              "query": [
+                {
+                  "key": "active",
+                  "value": "false"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get baristas with pagination (limit = 2, page = 2)",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas?limit=2&page=2",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2"
+                },
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add new barista",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Scott\",\r\n    \"email\": \"loge8154@stthomas.edu\",\r\n    \"phone\": \"010-654-5325\",\r\n    \"active\": true\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Example 1: John Nurse",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"John Nurse\",\r\n    \"email\": \"johnnurse@gmail.com\",\r\n    \"phone\": \"121-121-1211\",\r\n    \"active\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            },
+            {
+              "name": "Example 2: Michael",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Michael\",\r\n    \"email\": \"michael@gmail.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"active\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 3: Carmine Pender",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Carmine Pender\",\r\n    \"email\": \"pen51@gmail.com\",\r\n    \"phone\": \"623-111-4252\",\r\n    \"active\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            },
+            {
+              "name": "Example 4: Cole Logelin",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Cole Logelin\",\r\n    \"email\": \"loge8154@stthomas.edu\",\r\n    \"phone\": \"612-430-4958\",\r\n    \"active\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            },
+            {
+              "name": "Error 1: No name given",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"test@stthomas.edu\",\r\n    \"phone\": \"555-555-5555\",\r\n    \"active\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            },
+            {
+              "name": "Error 2: Duplicate key",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Scott\",\r\n    \"email\": \"loge8154@stthomas.edu\",\r\n    \"phone\": \"010-654-5325\",\r\n    \"active\": true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            }
+          ]
+        },
+        {
+          "name": "Update barista",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Michael\",\r\n    \"email\": \"michael@gmail.com\",\r\n    \"phone\": \"456-987-1097\",\r\n    \"active\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas/69f2805bc0f8ceb7e3d2d4a5",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas",
+                "69f2805bc0f8ceb7e3d2d4a5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Example 1: Update Michael",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Michael\",\r\n    \"email\": \"michael@gmail.com\",\r\n    \"phone\": \"123-456-7890\",\r\n    \"active\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas/69f2805bc0f8ceb7e3d2d4a5",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas",
+                    "69f2805bc0f8ceb7e3d2d4a5"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Error 1: Set key to duplicate",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Michael\",\r\n    \"email\": \"michael@gmail.com\",\r\n    \"phone\": \"456-987-1097\",\r\n    \"active\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas/69f2805bc0f8ceb7e3d2d4a5",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "baristas",
+                    "69f2805bc0f8ceb7e3d2d4a5"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Delete barista",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/baristas/69f2805bc0f8ceb7e3d2d4a5",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "baristas",
+                "69f2805bc0f8ceb7e3d2d4a5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "customers",
+      "item": [
+        {
+          "name": "Get all customers",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Sort customers by name (alphabetical)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers?sort=name",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "name"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a limited number of customers (limit = 2)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers?limit=2",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get one customer by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers/69f2fde81b14e664089d68d8",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "69f2fde81b14e664089d68d8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete customer",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers/69f31be79a53f71a01ddbd43",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "69f31be79a53f71a01ddbd43"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add new customer",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"delete test\",\r\n    \"email\": \"a@gmail.com\",\r\n    \"phone\": \"111-222-3333\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Example 1: Jim",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Jim\",\r\n    \"email\": \"jimemail@gmail.com\",\r\n    \"phone\": \"444-444-4444\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "customers"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 2: Henry Winter",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Henry Winter\",\r\n    \"email\": \"winner@gmail.com\",\r\n    \"phone\": \"890-098-0000\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "customers"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 3: Pickle",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Pickle\",\r\n    \"email\": \"idontwantnopickle@gmail.com\",\r\n    \"phone\": \"461-675-8235\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "customers"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Update customer",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Henry Winner\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/customers/69f2fde81b14e664089d68d8",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "customers",
+                "69f2fde81b14e664089d68d8"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "item": [
+        {
+          "name": "Get all menu items",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter menu items by category (hot drinks)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu?category=Hot Drink",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu"
+              ],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Hot Drink"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter menu items by name ($regex)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu?search=Black Coffee",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "Black Coffee"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Filter menu items by ingredients ($regex)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu?ingredient=Milk",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu"
+              ],
+              "query": [
+                {
+                  "key": "ingredient",
+                  "value": "Milk"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add new menu item",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Water\",\r\n    \"category\": \"Cold Drink\",\r\n    \"price\": 0\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Example 1: Latte",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Latte\",\r\n    \"category\": \"Hot Drink\",\r\n    \"price\": 500,\r\n    \"ingredients\": [\"Espresso\",\"Milk\"],\r\n    \"inStock\":true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "menu"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 2: Black Coffee",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Black coffee\",\r\n    \"category\": \"Hot Drink\",\r\n    \"price\": 250,\r\n    \"ingredients\": [\"Coffee\"],\r\n    \"inStock\":true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "menu"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 3: Deli Sandwich (default value for inStock)",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Deli Sandwich\",\r\n    \"category\": \"Cold Food\",\r\n    \"price\": 625,\r\n    \"ingredients\": [\"Bread\",\"Lettuce\",\"Tomato\",\"Ham\",\"Mustard\"]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "menu"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Add new menu item",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Iced Mocha\",\r\n    \"category\": \"Cold Drink\",\r\n    \"price\": 250,\r\n    \"inStock\":true\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "menu"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "",
+              "header": [],
+              "cookie": [
+                {
+                  "expires": "Invalid Date",
+                  "domain": "",
+                  "path": ""
+                }
+              ],
+              "body": ""
+            },
+            {
+              "name": "Error 1: No price",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"Water\",\r\n    \"category\": \"Cold Drink\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "menu"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Update menu item",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ingredients\": [\"Espresso\",\"Milk\",\"Chocolate\",\"Ice\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu/69f2e2d86a436ff2054e6a07",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu",
+                "69f2e2d86a436ff2054e6a07"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete menu item",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/menu/69f31ff53c27deaf3be6e762",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "menu",
+                "69f31ff53c27deaf3be6e762"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "orders",
+      "item": [
+        {
+          "name": "Get all orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get orders sorted by cost (ascending)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders?sort=cost",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "cost"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get one order by id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders/69f308ec1476ac8ebd6ba17e",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "69f308ec1476ac8ebd6ba17e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Add new orders",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"createdBy\": \"69f2d575debc0e2378eba90a\",\r\n    \"itemIds\": [\"69f31d8f3a991f0e00828f83\",\"69f31df03a991f0e00828f84\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Example 1: Latte & Iced Mocha",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"baristaId\": \"69f2ca8e7b354484a6fdd22f\",\r\n    \"itemIds\": [\"69f2ca927b354484a6fdd230\",\"69f2e2d86a436ff2054e6a07\"],\r\n    \"createdBy\": \"69f2d575debc0e2378eba90a\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 2: Cheese makes a sandwich for Pickle",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"baristaId\": \"69f2f012f79fe0b3e62fceb3\",\r\n    \"itemIds\": [\"69f31df03a991f0e00828f84\"],\r\n    \"createdBy\": \"69f2fe5e1b14e664089d68d9\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Example 3: Henry Orders Nothing",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"baristaId\": \"69f2fba01b14e664089d68d5\",\r\n    \"createdBy\": \"69f2fde81b14e664089d68d8\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Error 1: No customer ordered",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"baristaId\": \"69f2ca8e7b354484a6fdd22f\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            },
+            {
+              "name": "Error 2: No barista assigned",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"createdBy\": \"69f2d575debc0e2378eba90a\",\r\n    \"itemIds\": [\"69f31d8f3a991f0e00828f83\",\"69f31df03a991f0e00828f84\"]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders",
+                  "protocol": "https",
+                  "host": [
+                    "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                    "app",
+                    "github",
+                    "dev"
+                  ],
+                  "path": [
+                    "api",
+                    "orders"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": null,
+              "header": null,
+              "cookie": [],
+              "body": null
+            }
+          ]
+        },
+        {
+          "name": "Update menu item",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"status\": \"Completed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders/69f2f672e90435e11173a879",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "69f2f672e90435e11173a879"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete order",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "https://literate-succotash-q7pwx7v7j4rjh67w4-3000.app.github.dev/api/orders/69f32326d5e3a79487de0645",
+              "protocol": "https",
+              "host": [
+                "literate-succotash-q7pwx7v7j4rjh67w4-3000",
+                "app",
+                "github",
+                "dev"
+              ],
+              "path": [
+                "api",
+                "orders",
+                "69f32326d5e3a79487de0645"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
